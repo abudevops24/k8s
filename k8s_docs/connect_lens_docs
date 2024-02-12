@@ -1,0 +1,4 @@
+gcloud config set project your-project-id
+gcloud container clusters get-credentials  cluster-1 --zone=asia-south1-a
+cat ~/.kube/config 
+
