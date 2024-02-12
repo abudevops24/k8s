@@ -1,0 +1,44 @@
+How to Setup the PHP Info Page in docker-Compose
+-------------------------------------------------------
+Installing Docker and Docker Compose
+
+Create project
+mkdir my-php-project 
+cd my-php-project
+-------------------------------------------------------
+Create Dockerfile
+vim Dockerfile
+FROM php:7.4-apache
+-------------------------------------------------------
+Create file docker-compose.yml
+version: '3.9'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 80:80
+-------------------------------------------------------
+
+Assembling and launching containers
+
+docker-compose up --build -d 
+-------------------------------------------------------
+Check containers
+
+docker-compose ps
+-------------------------------------------------------
+Creating a PHP test file
+
+<?php
+
+phpinfo( );
+
+?>
+-------------------------------------------------------
+This Page
+
