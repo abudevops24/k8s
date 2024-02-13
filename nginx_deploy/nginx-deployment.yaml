@@ -13,6 +13,6 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: abudevops194/ myimages
+      - name: nginx
         ports:
         - containerPort: 80
