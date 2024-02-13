@@ -1,18 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: new_deployment
 spec:
+  replicas: 10 
   selector:
     matchLabels:
-      app: nginx
-  replicas: 8 # tells deployment to run 2 pods matching the template
+      app: example
   template:
     metadata:
       labels:
-        app: nginx
+        app: example
     spec:
       containers:
-      - name: abudevops194/ myimages
+      - name: nginx_html
+        image: abudevops194/my_kube
         ports:
         - containerPort: 80
