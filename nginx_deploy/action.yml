@@ -1,0 +1,16 @@
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  who-to-greet: abu  # id of input
+    description: 'none'
+    required: true
+    default: 'World'
+outputs:
+  time: 3 # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'abudevops194/myimages'
+  args:
+    - ${{ inputs.who-to-greet }}
