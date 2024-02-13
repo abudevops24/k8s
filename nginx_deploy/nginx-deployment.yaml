@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image:abudevops194/my_kube
+        image: abudevops194/my_kube
         ports:
         - containerPort: 80
