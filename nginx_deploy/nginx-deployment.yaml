@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment-10
+  name: nginx-deployment
 spec:
   selector:
     matchLabels:
-      app: nginx-1
+      app: nginx
   replicas: 10 # tells deployment to run 2 pods matching the template
   template:
     metadata:
